@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+body, html{
+    width: 100%;
+    height: 100%;
+    /*
+    overflow-x: hidden;
+    overflow-y: auto;
+    */
+    margin: 0;
+    background: #efefef;
+    overflow: hidden;
+}
+/*
+div{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*/
+button{
+    cursor: pointer;
+}
+#stage_container{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#invisible_container{
+	display:none;
+}
+.full_container{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+}
+.center_block{
+    position: fixed;
+    left:50%;
+    top:50%;
+}
+
+/* =============================== menu =============================== */
+#MENU{
+    position: relative;
+    width: 100%;
+    height: 70px;
+}
+.btn_container{
+    text-align: center;
+}
+.menu_button{
+    width: 140px;
+    text-align: center;
+    margin-top:20px;
+
+    color:#333;
+    background:transparent;
+    background: #ccc;
+    border: transparent;
+    box-shadow: none;
+
+    display:inline-block;
+    cursor:pointer;
+
+    font-family: "微軟正黑體";
+    font-size:12px;
+    padding:6px 4px;
+}
+.menu_button.selected{ -moz-box-shadow:inset 0px 1px 0px 0px #a6827e;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #a6827e;
+    box-shadow:inset 0px 1px 0px 0px #a6827e;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7d5d3b), color-stop(1, #634b30));
+    background:-moz-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+    background:-webkit-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+    background:-o-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+    background:-ms-linear-gradient(top, #7d5d3b 5%, #634b30 100%);
+    background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#7d5d3b', endColorstr='#634b30',GradientType=0);
+    background-color:#7d5d3b;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    border:1px solid #54381e;
+    color:#fff;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #4d3534;
+}
+.menu_button:active {
+    position:relative;
+    top:1px;
+}
+.gray_line{
+
+    background: #ddd;
+    width: 100%;
+    height: 2px;
+}
+.white_line{
+    background: #fff;
+    width: 100%;
+    height: 1px;
+}
+
+/* =============================== book input dialog =============================== */
+.book_dialog{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.8);
+    top:0; left: 0;
+    z-index: 1000;
+}
+.book_container{
+    position: absolute;
+    left:50%; top:50%;
+    width: 400px;
+    margin-left: -200px; margin-top: -240px;
+    background: #fff;
+    box-shadow: 0px 4px 2px rgba(0,0,0,.1);
+    border-radius: 3px;
+    border: 2px solid #333;
+}
+.book_row{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 39px;
+    border-bottom: 1px #ccc solid;
+}
+.book_row .text{
+    margin-top: 5px;
+    font-family: "Arial";
+    font-size: 16px;
+    text-align: center;
+    color: #ccc;
+}
+.book_row_1{
+    height: 30px;
+    background: #333;
+    border-top: 3px solid #444;
+    border-bottom: 3px solid #222;
+}
+.book_row_2{
+    height: 50px;
+    border-bottom: 2px #ccc solid;
+}
+.book_row_3{
+    height: 30px;
+    background: #333;
+    background: #333;
+    border-top: 3px solid #444;
+    border-bottom: 3px solid #222;
+}
+.book_row_4{
+    height: 50px;
+    border-bottom: 2px #ccc solid;
+}
+.book_row_5{
+    height: 30px;
+    background: #333;
+    background: #333;
+    border-top: 3px solid #444;
+    border-bottom: 3px solid #222;
+}
+.book_row_6{
+    height: 120px;
+    border-bottom: 2px #ccc solid;
+}
+.book_row_7{
+    height: 40px;
+    background: #ccc;
+    border-bottom: 2px #ccc solid;
+}
+.book_row_2 textarea{
+    resize: none;
+    width: 380px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    font-family: "微軟正黑體";
+    overflow: hidden;
+}
+.book_row_4 textarea{
+    resize: none;
+    width: 380px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    font-family: "微軟正黑體";
+    overflow: hidden;
+}
+.book_row_6 textarea{
+    resize: none;
+    width: 380px;
+    height: 100px;
+    padding: 10px;
+    border: none;
+    font-family: "微軟正黑體";
+}
+.dialog_button_confirm, .dialog_button_cancel{
+    position: absolute;
+    width: 80px;
+    height: 24px;
+    left:50%;
+    top:8px;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.dialog_button_confirm:active, .dialog_button_cancel:active{
+    top:10px;
+}
+
+.dialog_button_confirm{
+    margin-left: -90px;
+
+}
+.dialog_button_cancel{
+    margin-left: 10px;
+}
+
+/* =============================== panel =============================== */
+#PANEL{
+    position: relative;
+    text-align: center;
+    left:50%;
+    margin-left: -50%;
+    width: 100%;
+    height:30px;
+    background: #333;
+}
+.panel_button{
+    width: 130px;
+    text-align: center;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 2px;
+
+    display:inline-block;
+    cursor:pointer;
+    color:#eee;
+    font-family: "微軟正黑體";
+    font-size:13px;
+    letter-spacing: 2px;
+}
+.panel_button:hover{
+    color:aquamarine;
+}
+
+/* =============================== work area =============================== */
+#WORK_AREA{
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow-y: auto;
+}
+.thumb_wall{
+    position: relative;
+    margin-left: -425px;
+    left:50%;
+    width: 850px;
+
+}
+.top_gap{
+    position: relative;
+    width: 100%;
+    height:80px;
+}
+.book_block{
+    position: relative;
+    width:700px; height:220px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px #eee solid;
+    box-shadow: 0px 4px 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}.book_block.selected{
+     border: 2px royalblue solid;
+    width: 698px; height: 218px;
+ }
+.book_block .thumb{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: #9a9a9a;
+    top:10px; left:10px;
+}
+.book_block .detail_block{
+
+    position: absolute;
+    width: 360px;
+    height: 200px;
+    top:10px; right:10px;
+}
+.book_block.selected .thumb{
+    top:9px; left:9px;
+}
+.book_block.selected .detail_block{
+    top:9px; right:9px;
+}
+.date_label, .bookid_label, .num_label, .title_label, .description_label{
+    position: relative;
+    float: left;
+    width: 80px;
+    height: 30px;
+    color: #333;
+    font-family: "微軟正黑體";
+    font-size:14px;
+}
+.date_value, .bookid_value, .num_value, .title_value, .description_value{
+    position: relative;
+    float: left;
+    width: 280px;
+    height: 30px;
+    color: #999;
+    font-family: "微軟正黑體";
+    font-size:14px;
+    white-space:pre-line;
+    overflow: auto;
+}
+.description_value{
+    height: 80px;
+}
+
+
+/* =============================== thumb home =============================== */
+.thumb_home{
+    position: relative;
+    float: left;
+    margin: 30px;
+    width: 110px;
+    height:110px;
+    background: #fff;
+    box-shadow: 0 4px 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.thumb_home.selected{
+    border: 2px royalblue solid;
+    width: 106px; height:106px;
+}
+.thumb_home img{
+    margin-left:5px;
+    margin-top:5px;
+}
+.thumb_home.selected img{
+    margin-left:3px;
+    margin-top:3px;
+}
+
+/* =============================== thumb collection =============================== */
+.thumb_collection{
+    position: relative;
+    float: left;
+    margin: 20px;
+    width: 200px;
+    height:200px;
+    background: #fff;
+    box-shadow: 0 4px 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.thumb_collection.selected{
+    border: 2px royalblue solid;
+    width: 196px; height:196px;
+}
+.thumb_collection img{
+    margin-left:5px;
+    margin-top:5px;
+}
+.thumb_collection.selected img{
+    margin-left:3px;
+    margin-top:3px;
+}
+
+/* =============================== thumb wedding & photograph =============================== */
+.thumb_wedding, .thumb_photograph{
+    position: relative;
+    float: left;
+    margin: 20px;
+    width: 310px;
+    height:210px;
+    background: #fff;
+    box-shadow: 0 4px 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.thumb_wedding.selected, .thumb_photograph.selected{
+    border: 2px royalblue solid;
+    width: 306px; height:206px;
+}
+.thumb_wedding img, .thumb_photograph img{
+    margin-left:5px;
+    margin-top:5px;
+}
+.thumb_wedding.selected img, .thumb_photograph.selected img{
+    margin-left:3px;
+    margin-top:3px;
+}
+
+/* =============================== thumb creative =============================== */
+.thumb_creative{
+    position: relative;
+    float: left;
+    margin: 20px;
+    width: 310px;
+    height:210px;
+    background: #fff;
+    box-shadow: 0 4px 2px rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.thumb_creative.selected{
+    border: 2px royalblue solid;
+    width: 306px; height:206px;
+}
+.thumb_creative img{
+    margin-left:5px;
+    margin-top:5px;
+}
+.thumb_creative.selected img{
+    margin-left:3px;
+    margin-top:3px;
+}
+.book_thumb_cover{
+    position: absolute;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,.85);
+}
+.book_thumb_title{
+    position: absolute;
+    top:10px; left:10px;
+    width: 280px; height: 30px;
+    font-family: "微軟正黑體";
+    font-size: 15px;
+    font-weight: bold;
+    color: #7d5d3b;
+}
+.book_thumb_description{
+    position: absolute;
+    top:40px; left:10px;
+    width: 280px; height: 150px;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+    color: #999;
+}

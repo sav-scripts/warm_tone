@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <title>main frame</title>
+    </head>
+
+    <body>
+
+        <div id="main_frame">
+            <div class="title"></div>
+
+            <div class="btn_sound"></div>
+            <div class="btn_back">< Back</div>
+            <div class="btn_autoplay">Auto Play: On</div>
+
+            <div class="menu">
+                <div class="home"></div>
+                <div class="profile"></div>
+                <div class="collection"></div>
+                <div class="portfolio">
+                    <div class="options">
+                        <div class="option_gap"></div>
+                        <div class="option_0 option"></div>
+                        <div class="option_1 option"></div>
+                        <div class="option_2 option"></div>
+                    </div>
+                </div>
+                <div class="contact"></div>
+            </div>
+
+            <div class="main_container">
+                <div class="loading_icon"></div>
+            </div>
+
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&appId=212169482270500&version=v2.0";
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+            </script>
+
+            <div class="footer">
+                <div class="fb-like" data-href="http://www.1024.idv.tw/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+            </div>
+        </div>
+
+    </body>
+</html>

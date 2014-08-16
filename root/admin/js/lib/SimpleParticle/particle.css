@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+.savpts_particle{
+	position:absolute;
+	z-index:1000;
+	pointer-events:none;
+}
+.savpts_emitter{
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:1000;
+}
+.particle_circle{
+	width:40px;
+	height:40px;
+	background:url(Light.png);
+	background:none \9;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light.png') \9;
+}
+.spark_dot_1{
+    width:54px;
+    height:54px;
+    background:url(Light_1.png);
+    background:none \9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light_1.png') \9;
+}
+.spark_dot_2{
+    width:54px;
+    height:54px;
+    background:url(Light_2.png);
+    background:none \9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light_1.png') \9;
+}
+
+
+.spark_dot_3{
+    width:54px;
+    height:54px;
+    background:url(Light_3.png);
+    background:none \9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light_1.png') \9;
+}
+
+
+.spark_dot_4{
+    width:54px;
+    height:54px;
+    background:url(Light_4.png);
+    background:none \9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light_1.png') \9;
+}
+
+
+.spark_dot_5{
+    width:54px;
+    height:54px;
+    background:url(Light_5.png);
+    background:none \9;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale',src='Light_1.png') \9;
+}
+
+
+

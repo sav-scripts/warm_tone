@@ -1,0 +1,399 @@
+/* =============================== main frame =============================== */
+html, body{
+    width: 100%;
+    height: 100%;
+    /*
+    overflow-x: hidden;
+    overflow-y: auto;
+    */
+    margin: 0;
+    overflow-x: hidden;
+}
+#main_frame{
+    position: absolute;
+    min-width: 1360px;
+    width: 100%;
+
+}
+.title{
+    position: absolute;
+    width: 452px; height:36px;
+    top: 47px; left:50%;
+    margin-left: -226px;
+    background: url(../images/title.png);
+}
+.btn_sound{
+    position: absolute;
+    top: 176px; left:50%;
+    margin-left: -660px;
+    background: url(../images/btn_sound.png) no-repeat;
+    width: 23px; height: 29px;
+    cursor: pointer;
+}
+@font-face {
+    font-family: 'gothic_light';
+    src: url('../misc/PHEI00L.eot'); /* IE9 Compat Modes */
+     src:url("../misc/PHEI00L.eot?#iefix") format('embedded-opentype'),
+        url("../misc/PHEI00L.TTF"),
+        url("../misc/PHEI00L.woff");
+}
+.btn_back{
+    position: absolute;
+    top: 176px; left:50%;
+    margin-left: 420px;
+    width: 120px; height: 29px;
+}
+.btn_autoplay{
+    position: absolute;
+    top: 176px; left:50%;
+    margin-left: 540px;
+    width: 120px; height: 29px;
+}
+.btn_autoplay, .btn_back{
+    color: #ccc;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: right;
+    font-family: 'gothic_light';
+
+}
+.btn_back:hover, .btn_autoplay:hover{
+    color: #FF9900;
+}
+.btn_sound:hover{
+    background-position: 0 -30px;
+}
+.menu{
+    position: absolute;
+    z-index: 10;
+    top: 162px; left:50%;
+    margin-left: -300px;
+    width: 600px;
+    height: 42px;
+}
+.home, .profile, .collection, .portfolio, .contact{
+    width: 120px;
+    height: 20px;
+    position:absolute;
+    cursor: pointer;
+}
+.home:hover, .profile:hover, .collection:hover, .portfolio:hover, .contact:hover,
+.home.hover, .profile.hover, .collection.hover, .portfolio.hover, .contact.hover{
+    background-position: 0 -20px;
+}
+.home{
+    background: url(../images/menu_btn_home.png);
+}
+.profile{
+    background: url(../images/menu_btn_profile.png);
+    left:90px;
+}
+.collection{
+    background: url(../images/menu_btn_collection.png);
+    left:210px;
+}
+.portfolio{
+    background: url(../images/menu_btn_portfolio.png);
+    right: 137px;
+}
+.contact{
+    background: url(../images/menu_btn_contact.png);
+    right: 20px;
+}
+
+.portfolio .options{
+    position: relative;
+    top:20px; left:10px;
+    width: 100px;
+    height: 200px;
+}
+.portfolio .option{
+    width: 100px;
+    height: 32px;
+    background-image: url(../images/portfolio_options.png);
+}
+
+.portfolio .options .option_0{ background-position: 0px 0px; }
+.portfolio .options .option_1{ background-position: 0px -64px; }
+.portfolio .options .option_2{ background-position: 0px -128px; }
+.portfolio .options .option_0:hover{ background-position: 0px -32px; }
+.portfolio .options .option_1:hover{ background-position: 0px -96px; }
+.portfolio .options .option_2:hover{ background-position: 0px -160px; }
+
+.option_gap{
+    width:100px;
+    height:16px;
+    position: relative;
+}
+
+.footer{
+    position: absolute;
+    top:966px; left:50%;
+    margin-left: -220px;
+    width: 359px; height: 20px;
+    background: url(../images/footer.png) no-repeat;
+    padding-bottom: 30px;
+}
+.fb-like{
+    left:100%;
+    margin-left: 20px;
+}
+.main_container{
+    position: absolute;
+    width: 1320px; height: 725px;
+    top: 198px; left:50%;
+    margin-left: -660px;
+    background: #eee;
+    overflow: hidden;
+}
+.loading_icon{
+    position: absolute;
+    width:30px;height:30px;
+    top:50%; left:50%;
+    margin-top: -15px;
+    margin-left: -15px;
+    background: url(../images/loading.gif);
+    opacity: .3;
+}
+
+/* =============================== home =============================== */
+.home_image{
+    position: absolute;
+    top:50%; left:50%;
+    margin-left: -500px;
+    margin-top: -333px;
+    background: url(../images/home_sample.png);
+    width: 1000px;
+    height: 666px;
+}
+
+/* =============================== profile =============================== */
+#profile{
+    position: absolute;
+    width:1060px; height: 430px;
+    left:50%; top:50%;
+    margin-left: -530px;
+    margin-top: -215px;
+}
+.profile_title{
+    position: absolute;
+    font-family: "Arial";
+    font-size: 15px;
+    color:#999;
+}
+.profile_image{
+    position: absolute;
+    left:0; bottom:0;
+    width: 600px; height:398px;
+    background: url(../images/profile_pic_0.png);
+}
+.profile_text{
+    position: absolute;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+    color:#666;
+    bottom:0;
+    left:630px;
+    line-height: 40px;
+    margin-bottom: -10px;
+}
+
+/* =============================== collection =============================== */
+.collection_thumb_wall{
+    position: absolute;
+    top:50%; left:50%;
+    margin-left: -500px;
+    margin-top: -300px;
+    width: 1000px;
+    height: 600px;
+}
+.collection_thumb_block{
+    position: absolute;
+    width: 190px; height:190px;
+    background:#fff;
+    cursor: pointer;
+}
+.arrow_prev{
+    position: absolute;
+    width: 33px;
+    height: 56px;
+    top:50%;
+    margin-top: -28px;
+    left:50px;
+    cursor: pointer;
+    background: url("../images/page_arrow.png") 0 0;
+    z-index: 10;
+}
+.arrow_next{
+    position: absolute;
+    width: 33px;
+    height: 56px;
+    top:50%;
+    margin-top: -28px;
+    right:50px;
+    cursor: pointer;
+    background: url("../images/page_arrow.png") -50px 0px;
+    z-index: 10;
+}
+.arrow_prev:hover{
+    background-position: 0 -60px;
+}
+.arrow_prev:active{
+    left:48px;
+}
+.arrow_next:hover{
+    background-position: -50px -60px;
+}
+.arrow_next:active{
+    right:48px;
+}
+
+/* =============================== creative =============================== */
+.creative_thumb_wall{
+    position: absolute;
+    top:50%; left:50%;
+    margin-left: -615px;
+    margin-top: -315px;
+    width: 1230px;
+    height: 630px;
+}
+.creative_thumb_block{
+    position: absolute;
+    width: 300px; height:200px;
+    background:#fff;
+    cursor: pointer;
+}
+
+/* =============================== book =============================== */
+.book_thumb_wall{
+    position: absolute;
+    top:50%; left:50%;
+    margin-left: -615px;
+    margin-top: -310px;
+    width: 1230px;
+    height: 620px;
+}
+.book_thumb_block{
+    position: absolute;
+    width: 300px; height:200px;
+    background:#333;
+    cursor: pointer;
+}
+.book_thumb_cover{
+    position: absolute;
+    top:0; left:0;
+    width: 100%; height: 100%;
+    background: rgba(255,255,255,.85);
+}
+.book_thumb_title{
+    position: absolute;
+    top:10px; left:10px;
+    width: 280px; height: 30px;
+    font-family: "微軟正黑體";
+    font-size: 15px;
+    font-weight: bold;
+    color: #7d5d3b;
+}
+.book_thumb_description{
+    position: absolute;
+    top:40px; left:10px;
+    width: 280px; height: 150px;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+    color: #999;
+}
+.book_thumb_container .arrow_prev{
+    left:5px;
+}
+.book_thumb_container .arrow_next{
+    right:5px;
+}
+.book_thumb_container .arrow_prev:active{
+    left:3px;
+}
+.book_thumb_container .arrow_next:active{
+    right:3px;
+}
+
+/* =============================== contact =============================== */
+.image_show_container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.image_show_loading{
+    position: absolute;
+    left:50%; top:50%;
+    margin-left: -15px; margin-top: -15px;
+    width: 30px; height: 30px;
+    background:url(../images/loading.gif);
+}
+
+/* =============================== contact =============================== */
+#contact{
+    position: absolute;
+    width:740px; height: 266px;
+    left:50%; top:50%;
+}
+.contact_image{
+    position: absolute;
+    left:-350px; top:-133px;
+    width: 400px; height:266px;
+    background: url(../images/contact.png);
+}
+.contact_text{
+    position: absolute;
+    font-family: "微軟正黑體";
+    font-size: 14px;
+    color:#999;
+    left: 80px; bottom:133px;
+    line-height: 30px;
+    margin-bottom: -0px;
+}
+
+/* =============================== image scroll =============================== */
+.image_scroll_container{
+    position: absolute;
+    width: 2000px;
+    top: 228px; left:50%;
+    margin-left: -1000px;
+}
+.image_scroll_block{
+    position: relative;
+    display: block;
+    text-align: center;
+    margin: 25px auto;
+}
+.image_scroll_title{
+    position: relative;
+    float:left;
+    width:700px; height: 30px;
+    margin-left: 500px;
+}
+.image_scroll_date{
+    position: relative;
+    float: left;
+    width: 300px;height:30px;
+    text-align: right;
+    margin-right: 500px;
+}
+.image_scroll_title, .image_scroll_date{
+    font-family: "微軟正黑體";
+    font-size: 16px;
+    color: #999;
+}
+
+
+/* =============================== code =============================== */
+#stage_container{
+    position:absolute;
+    top:0;
+    z-index:0;
+    width: 1320px;
+    height:100%;
+    left:50%;
+    margin-left: -660px;
+}
+#invisible_container{
+    display:none;
+}
