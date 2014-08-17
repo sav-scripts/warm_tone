@@ -37,6 +37,7 @@
 
             function stageIn_start()
             {
+                MainFrame.firstPlayBgm();
                 MainFrame.exitLoadingMode(0);
                 _isLocking = true;
                 $(".main_container").append(_dom);

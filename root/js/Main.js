@@ -3,6 +3,7 @@
  */
 (function(){
 
+
     var _p = window.Main ={};
 
     var _bookList;
@@ -10,6 +11,8 @@
     _p.init = function()
     {
 
+        _p.isReady = false;
+        window._T = SupportDetect.transform()? true: false;
 
         /** site define **/
         Core.defaultStageName = "Home";
@@ -51,12 +54,17 @@
         };
 
 
+
         //SimplePreloading.show();
-        getBookList(function()
+        MainFrame.stageIn(function()
         {
-            MainFrame.stageIn(function()
+            getBookList(function()
             {
-                Core.start("Home", true, cbCompleteStageDefine);
+                SoundPlayer.initSound(_T == false, function()
+                {
+                    //SimplePreloading.hide();
+                     Core.start("Home", true, cbCompleteStageDefine);
+                });
             });
         });
 
@@ -91,7 +99,7 @@
 
             _bookList = response.book_list;
             if(cb != null) cb.apply();
-        });
+        }, null, false, true);
     }
 
 

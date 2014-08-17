@@ -9,7 +9,10 @@ body, html{
     */
     margin: 0;
     background: #efefef;
-    overflow: hidden;
+    overflow-x: hidden;
+}
+div{
+    -webkit-overflow-scrolling: touch;
 }
 /*
 div{
@@ -244,11 +247,10 @@ button{
     background: #333;
 }
 .panel_button{
-    width: 130px;
+    width: auto;
     text-align: center;
     height: 100%;
-    margin-top: 5px;
-    margin-left: 2px;
+    margin: 5px 20px;
 
     display:inline-block;
     cursor:pointer;

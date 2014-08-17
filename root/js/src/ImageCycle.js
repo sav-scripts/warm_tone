@@ -41,6 +41,7 @@
 
             function stageIn_start()
             {
+                MainFrame.firstPlayBgm();
                 $(".main_container").append(_dom);
 
                 TweenMax.to(_dom,.5, {alpha:1});
@@ -108,7 +109,7 @@
                     cb.apply();
                 });
 
-            });
+            }, null, false, true);
         
                     
             function build()

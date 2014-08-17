@@ -292,7 +292,7 @@
 
     Core.toStage = function(targetPathName, extraOptions)
     {
-        console.log(targetPathName);
+        //console.log(targetPathName);
         if(extraOptions) _extraOptions = extraOptions;
 
         if(_useDeepLink)
@@ -459,7 +459,11 @@
 
 //    console.log("target className = " + className + ", currentClassName = " + currentClassName);
 
-        if(!className) { alert("stage type: [" + className + "] is not defined"); return; }
+        if(!className)
+        {
+            return;
+            //alert("stage type: [" + className + "] is not defined"); return;
+        }
 
         if(currentClassName == className)
         {

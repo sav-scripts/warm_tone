@@ -31,6 +31,7 @@
 
             function stageIn_start()
             {
+                MainFrame.firstPlayBgm();
                 _isLocking = true;
                 //$("#main_frame").append(_dom);
 
@@ -158,7 +159,7 @@
                     //console.log("loaded");
                     _dom.appendChild(imageDom);
 
-                    totalHeight += imageDom.height + 30;
+                    totalHeight += imageDom.height + 25;
 
                     TweenMax.set(imageDom, {alpha:0});
 

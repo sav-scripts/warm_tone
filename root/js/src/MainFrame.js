@@ -106,6 +106,7 @@
                 Doms.btnPortfolio = Core.extract(".portfolio");
                 Doms.btnContact = Core.extract(".contact");
 
+
                 Doms.container = Core.extract(".main_container");
                 Doms.loadingIcon = Core.extract(".loading_icon");
 
@@ -118,6 +119,8 @@
                 switchAutoplay(false, true);
                 switchBtnBack(false);
 
+                setupSound();
+
                 toLoadingMode(0);
 
                 setupOptions(Doms.btnPortfolio);
@@ -126,6 +129,41 @@
                 bindFunc();
 
                 if (_dom.parentNode) _dom.parentNode.removeChild(_dom);
+            }
+
+            function setupSound()
+            {
+                var btnSound = Core.extract(".btn_sound");
+
+                var firstPlayed = false;
+
+                _p.firstPlayBgm = function()
+                {
+                    if(firstPlayed) return;
+                    firstPlayed = true;
+
+                    SoundPlayer.playBGM();
+                    $(btnSound).toggleClass("sound_on", true);
+                };
+
+                /*
+                $(btnSound).mouseover(function()
+                {
+                    $(btnSound).toggleClass("sound_on", !SoundPlayer.getBgmOn());
+                });
+
+                $(btnSound).mouseout(function()
+                {
+                    $(btnSound).toggleClass("sound_on", SoundPlayer.getBgmOn());
+                });
+                */
+
+                $(btnSound).click(function()
+                {
+                    SoundPlayer.switchBGM();
+                    $(btnSound).toggleClass("sound_on", SoundPlayer.getBgmOn());
+                });
+
             }
 
             function setupOptions(dom)
