@@ -1,0 +1,33 @@
+*** 網站架構 ***
+
+以 index.html 頁面為主, 套用程式後再讀入各個子頁面
+子頁面是根目錄所有 "_" 開頭的 html 檔案
+
+_main_frame.html => 選單, 底部 footer 等各單元公用的內容
+_home.html => HOME 單元
+_contact => CONTACT 單元
+_profile.html => PROFILE 單元
+
+_book.html, _contact.html => 程式用內頁, 這個應該不需調整
+
+
+網站用到的圖片資源放置在 images/ 資料夾中
+音樂和字型檔放置在 misc/ 資料夾中
+
+
+
+*** 內容編輯 ***
+圖片更換, 或是 html 頁面調整後, 瀏覽器必須清除快取才能看到更新的內容
+
+_main_frame.html
+這邊大部分的元素以圖片構成, 所以更換 images/ 裡面的圖片就好 (圖片尺寸要相同)
+如果熟悉 html 和 css 的話, 也可以自行調整, 不過裡面的各個 id 和 class 不能刪除或變動(可以新增), 因為要供程式抓取
+
+
+_profile.html
+這單元的內容大致不需要程式, 所以編輯 #profile 標籤內的內容就可以,
+如果是維持目前排列方去編輯, 那只要改標籤內的內文就可以改變內容, 圖片的話更換 images/ 裡面對應的圖片就好
+
+_contact.html
+跟 _profile 的編輯相同, 編輯 #contact 標籤內的內容就可以
+這裡面有兩個連結, 一樣直接更換就好
