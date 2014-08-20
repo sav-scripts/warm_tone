@@ -33,6 +33,7 @@
         var _autoplayTimed = false;
 
         var _cycleDuration = 4;
+        var _fadeDuration = .7;
 
         _p.stageIn = function (cb, option)
         {
@@ -253,7 +254,7 @@
             switchLoadingIcon(false);
             _dom.appendChild(Doms.image);
             $(Doms.image).css("position", "absolute").css("left", "50%").css("top", "50%").css("margin-left", -Doms.image.width *.5).css("margin-top", -Doms.image.height *.5);
-            TweenMax.from(Doms.image,.5, {alpha:0, left:toLeft?"40%":"60%"});
+            TweenMax.from(Doms.image,_fadeDuration, {alpha:0, left:toLeft?"50%":"50%"});
 
             if(_autoPlay)
             {
@@ -300,7 +301,7 @@
                 Doms.image = null;
                 dom.onload = null;
 
-                TweenMax.to(dom,.5, {alpha:0, left:toLeft?"60%":"40%", onComplete:function()
+                TweenMax.to(dom,.5, {alpha:0, left:toLeft?"50%":"50%", onComplete:function()
                 {
                     $(dom).detach();
                 }});
